@@ -50,4 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         videoElement.play();
     }
+
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach(card => {
+        const link = card.querySelector("a");
+        if (link) {
+            card.addEventListener("click", () => {
+                window.open(link.href, "_blank");
+            });
+        }
+
+        card.style.padding = "20px";
+    });
 });
